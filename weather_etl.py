@@ -7,7 +7,7 @@ import psycopg2
 cities = ('London','New York', 'Hong Kong', 'Sydney', 'Paris', 'Tokyo', 'Dubai', 'Los Angeles', 'Rome', 'Casablanca','Mexico City','Islamabad','Moscow','Bogota',
           'Miami','Cape Town', 'Nairobi')
 def getWeather():
-    parameters = {'key':'3d0bfca3626e4471927181720230904 ','q':random.choice(cities),'aqi':'yes'}
+    parameters = {'key':'insertkey','q':random.choice(cities),'aqi':'yes'}
     result = requests.get('http://api.weatherapi.com/v1/current.json',parameters)
     if result.status_code == 200:
         json_data = result.json()
